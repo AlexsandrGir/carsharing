@@ -8,9 +8,9 @@ async def seed_cars():
         result = await session.execute(select(Car))
         if not result.scalars().first():
             cars = [
-                Car(model="Tesla Model 3", number="А777АА77", lat=55.7558, lng=37.6173, price_per_minute=15.0),
-                Car(model="BMW 3", number="В123ВВ77", lat=55.7590, lng=37.6250, price_per_minute=12.0),
-                Car(model="Audi A4", number="О001ОО77", lat=55.7512, lng=37.6011, price_per_minute=11.0)
+                Car(model="Tesla Model 3", number="А777АА77", lat=53.3558, lng=83.6173, price_per_minute=15.0),
+                Car(model="BMW 3", number="В123ВВ77", lat=53.3590, lng=83.7850, price_per_minute=12.0),
+                Car(model="Audi A4", number="О001ОО77", lat=53.3512, lng=83.6011, price_per_minute=11.0)
             ]
             session.add_all(cars)
             await session.commit()
